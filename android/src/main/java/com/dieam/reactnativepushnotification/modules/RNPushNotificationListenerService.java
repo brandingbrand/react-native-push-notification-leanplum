@@ -1,7 +1,7 @@
 package com.dieam.reactnativepushnotification.modules;
 
 import java.util.Map;
-import com.google.firebase.messaging.FirebaseMessagingService;
+import com.leanplum.LeanplumPushFirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 import android.app.ActivityManager;
@@ -25,10 +25,12 @@ import java.util.Random;
 
 import static com.dieam.reactnativepushnotification.modules.RNPushNotification.LOG_TAG;
 
-public class RNPushNotificationListenerService extends FirebaseMessagingService {
+public class RNPushNotificationListenerService extends LeanplumPushFirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage message) {
+        super.onMessageReceived(message);
+
         String from = message.getFrom();
         RemoteMessage.Notification remoteNotification = message.getNotification();
 
