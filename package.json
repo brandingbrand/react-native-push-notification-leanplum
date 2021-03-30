@@ -1,6 +1,6 @@
 {
   "name": "@brandingbrand/react-native-push-notification-leanplum",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "React Native Local and Remote Notifications",
   "main": "index.js",
   "scripts": {
